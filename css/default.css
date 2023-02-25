@@ -1,0 +1,233 @@
+/* BASE STYLES HERE */
+
+:root
+{
+  /* color and font theme */
+  --theme-color: dodgerblue;
+  --theme-font-color: black;
+  --theme-reverse-font-color: white;
+  --theme-button-min-width: 6.5rem;
+  --theme-play-button-min-width: 8rem;
+  --theme-normal-font-size: 0.75rem;
+  --theme-little-normal-font-size: 0.7rem;
+  --theme-button-font-size: 0.75rem;
+  --theme-normal-font-weight: 500;
+  --theme-button-font-weight: 600;
+  --theme-button-padding: 0.8rem;
+  --theme-button-border-radius: 1.75rem;
+  --theme-sketch-button-min-width: 3.5rem;
+  --theme-sketch-button-color: lightseagreen;
+  --theme-normal-font-size: 0.9rem;
+  --theme-normal-font-color: grey;
+  --theme-normal-reverse-font-color: var(--theme-color);
+  --theme-title-font-weight: 400;
+  --theme-title-font-size: 2.5rem;
+  --theme-subtitle-font-weight: 700;
+  --theme-subtitle-font-size: 2rem;
+  --theme-subheader-font-weight: 500;
+  --theme-subheader-font-size: 1.25rem;
+  --theme-subsubheader-font-weight: 700;
+  --theme-subsubheader-font-size: 1.2rem;
+  --theme-normal-font-family: "Kanit", "sans-serif";
+  --theme-form-background-color: #20335b;
+
+  --page-header-height: 40rem;
+  --page-max-width: 65rem;
+}
+
+/* suggested from: https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size */
+*
+{
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+body
+{
+  display: block;
+  font-family: var(--theme-normal-font-family);
+  font-weight: var(--theme-normal-font-weight);
+  letter-spacing: 0;
+  color: var(--theme-font-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1
+{
+  font-weight: var(--theme-title-font-weight);
+  font-size: var(--theme-title-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.little-h1
+{
+  font-weight: var(--theme-title-font-weight);
+  color: var(--theme-font-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2
+{
+  font-weight: var(--theme-subtitle-font-weight);
+  font-size: var(--theme-subtitle-font-size);
+  margin-bottom: 0.5rem;
+}
+
+h3
+{
+  font-weight: var(--theme-subheader-font-weight);
+  font-size: var(--theme-subheader-font-size);
+  margin-bottom: 0.5rem;
+}
+
+h4
+{
+  font-weight: var(--theme-subsubheader-font-weight);
+  font-size: var(--theme-subsubheader-font-size);
+  margin-bottom: 0;
+}
+
+p, label
+{
+  color: var(--theme-normal-font-color);
+}
+
+/* margin and padding go inside element at desired size */
+*,
+::after,
+::before
+{
+  box-sizing: border-box;
+}
+
+ul
+{
+  padding: 0;
+  margin-right: 1.563rem;
+  list-style: none;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+p
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.short-p
+{
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+.container
+{
+  width: 100%;
+  padding-left: 0.938rem;
+  padding-right: 0.938rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.btn
+{
+  display: inline-block;
+  font-size: var(--theme-button-font-size);
+  font-weight: var(--theme-button-font-weight);
+  color: var(--theme-reverse-font-color);
+  text-align: center;
+  padding: var(--theme-button-padding);
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--theme-color);
+  border: 1px solid transparent;
+  border-radius: var(--theme-button-border-radius);
+  min-width: var(--theme-button-min-width);
+  white-space: nowrap;
+}
+
+.btn-play
+{
+  min-width: var(--theme-play-button-min-width);
+  width: var(--theme-play-button-min-width);
+}
+
+.btn-sketch
+{
+  min-width: var(--theme-sketch-button-min-width);
+  background-color: var(--theme-sketch-button-color);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  color: white;
+  height: 80%;
+  font-weight: 400;
+}
+
+.btn-hiring
+{
+  font-size: 0.6rem;
+  min-width: 3rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 4px;
+  color: white;
+  height: 80%;
+  font-weight: 400;
+}
+
+.btn-play i
+{
+  color: var(--theme-color);
+  background-color: var(--theme-reverse-font-color);
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 0.5rem;
+}
+
+.normal-text-reverse-bold
+{
+  color: var(--theme-normal-reverse-font-color);
+  font-weight: 700;
+}
+
+.nowrap-me
+{
+  white-space: nowrap;
+}
+
+
+.normal-color-h2
+{
+  font-weight: var(--theme-subheader-font-weight);
+  font-size: var(--theme-subheader-font-size);
+  color: var(--theme-normal-font-color);
+}
+
+.normal-color-h3
+{
+  color: var(--theme-normal-font-color);
+}
+
+.little-normal-text
+{
+  color: var(--theme-normal-font-color);
+  font-size: var(--theme-little-normal-font-size);
+}
